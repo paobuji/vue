@@ -4,6 +4,9 @@ import Vue from 'vue'
 import  VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+import  VueResource from 'vue-resource'
+Vue.use(VueResource)
+Vue.http.options.root = 'http://www.liulongbin.top:3005';
 
 // import './css/index.css'
 /*需要引入插件 style-loader css-loader*/
@@ -11,9 +14,9 @@ Vue.use(VueRouter)
 
 // 按需导入mintui 组件
 import 'mint-ui/lib/style.css'
-
-import { Header } from 'mint-ui';
+import { Header,Button } from 'mint-ui';
 Vue.component(Header.name, Header);
+Vue.component(Button.name, Button);
 
 import { Swipe, SwipeItem } from 'mint-ui';
 Vue.component(Swipe.name, Swipe);
